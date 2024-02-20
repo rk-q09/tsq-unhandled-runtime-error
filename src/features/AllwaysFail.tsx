@@ -8,12 +8,14 @@ function failingQuery() {
 }
 
 const AllwaysFailComponent = () => {
+  /*
   const { data } = useQuery({
     queryKey: ["always fail"],
     queryFn: failingQuery,
   });
-
   console.log("you never get this data", data);
+  */
+  throw new Error("oh no");
 
   return <div>allways fail</div>;
 };
